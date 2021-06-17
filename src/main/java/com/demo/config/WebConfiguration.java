@@ -47,6 +47,8 @@ public class WebConfiguration implements WebMvcConfigurer {
         excludePath.add("/account/captcha");
         excludePath.add("/account/login");
 
+        excludePath.add("/course/**");
+
         registry.addInterceptor(tokenInterceptor)
                 .addPathPatterns("/**")
                 .excludePathPatterns(excludePath);

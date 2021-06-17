@@ -15,20 +15,30 @@ import java.sql.Date;
 @Data
 @Entity
 public class Student {
+    @NotNull
     private String name;
+    @NotNull
     private String gender;
     @Id
     private String academicCode;
+    @NotNull
     private String idNumber;
     private String phoneNumber;
     private String email;
     private Date birthday;
     private String auxiliaryDepartment;
+    @NotNull
     private String majorDepartment;
     private String degreeLevel;
     private Integer credit;
     private String dorm;
-    private String grade;
+    private Integer grade;
     private String address;
+
+
+    public StudentView toStudentView() {
+        return new StudentView(this.name, this.academicCode);
+    }
 }
+
 

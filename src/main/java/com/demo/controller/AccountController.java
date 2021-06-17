@@ -72,4 +72,5 @@ public class AccountController {
         ImageIO.write(image, "jpg", out);
         IOUtils.closeQuietly(out);
     }
+
 }
